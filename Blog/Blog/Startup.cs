@@ -1,17 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Blog.Database;
 using Blog.Database.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace Blog
 {
     public class Startup
@@ -26,7 +22,18 @@ namespace Blog
         {
             services.AddControllersWithViews();
             services.AddDbContext<BlogDbContext>(builder => builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-            
+
+            services.AddIdentityCore<IdentityUser>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+
+            })
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<BlogDbContext>();
+
             services.AddTransient<IPostService, PostService>();
         }
 
@@ -36,6 +43,8 @@ namespace Blog
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseRouting();
 

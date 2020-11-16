@@ -74,5 +74,11 @@ D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Blog.StaticWebAssets.xml
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.csproj.CoreCompileInputs.cache
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.MvcApplicationPartsAssemblyInfo.cache
