@@ -33,3 +33,4 @@ D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.genruntimeconfig.cache
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.csproj.CopyComplete
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Home\Post.cshtml.g.cs
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
