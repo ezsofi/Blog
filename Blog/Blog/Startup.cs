@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Blog.Database;
+using Blog.Database.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +26,8 @@ namespace Blog
         {
             services.AddControllersWithViews();
             services.AddDbContext<BlogDbContext>(builder => builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddTransient<IPostService, PostService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
