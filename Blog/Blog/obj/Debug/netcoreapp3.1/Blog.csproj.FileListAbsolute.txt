@@ -31,7 +31,6 @@ D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.genruntimeconfig.cache
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.csproj.CopyComplete
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Home\Post.cshtml.g.cs
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -83,3 +82,5 @@ D:\C#\C#_Blog\Blog\Blog\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.St
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.csproj.CoreCompileInputs.cache
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Blog.MvcApplicationPartsAssemblyInfo.cache
 D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
+D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Index.cshtml.g.cs
+D:\C#\C#_Blog\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Edit.cshtml.g.cs

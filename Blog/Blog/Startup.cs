@@ -32,7 +32,13 @@ namespace Blog
             })
                 .AddEntityFrameworkStores<BlogDbContext>();
 
+            services.ConfigureApplicationCookie(options => 
+            {
+                options.LoginPath = "/Auth/Login";
+            });
+
             services.AddTransient<IPostService, PostService>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -45,7 +51,7 @@ namespace Blog
             app.UseAuthentication();
 
             app.UseRouting();
-
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -10,7 +10,7 @@ namespace Blog.Controllers
 {
     public class AuthController : Controller
     {
-        private SignInManager<IdentityUser> signInManager;
+        private readonly SignInManager<IdentityUser> signInManager;
         public AuthController(SignInManager<IdentityUser> signInManager)
         {
             this.signInManager = signInManager;
@@ -27,7 +27,7 @@ namespace Blog.Controllers
         public async Task<IActionResult> Login(LoginViewModel vm)
         {
             var result = await signInManager.PasswordSignInAsync(vm.UserName, vm.Password, false, false);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Panel");
         }
         #endregion
 
