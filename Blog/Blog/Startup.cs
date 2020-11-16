@@ -23,15 +23,13 @@ namespace Blog
             services.AddControllersWithViews();
             services.AddDbContext<BlogDbContext>(builder => builder.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentityCore<IdentityUser>(options =>
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 6;
-
             })
-                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<BlogDbContext>();
 
             services.AddTransient<IPostService, PostService>();

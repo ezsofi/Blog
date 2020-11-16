@@ -19,8 +19,15 @@ using Blog.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "D:\C#\C#_Blog\Blog\Blog\Views\_ViewImports.cshtml"
+using Blog.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3044d34496251dfd64cc8c99b728fe8c605bcb04", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6f3a081a5158c940fb18fb0baf19c54e0dfb04cf", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6f86e91a270fb3b002cdedf9e98496ee0466b6e8", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Post>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +69,7 @@ using Blog.Models;
 #line hidden
 #nullable disable
             WriteLiteral("        <li>\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb044342", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb044503", async() => {
                 WriteLiteral("\r\n                ");
 #nullable restore
 #line 14 "D:\C#\C#_Blog\Blog\Blog\Views\Home\Index.cshtml"
@@ -103,7 +110,7 @@ using Blog.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            -\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb046937", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb047098", async() => {
                 WriteLiteral("\r\n                Edit\r\n            ");
             }
             );
@@ -136,7 +143,7 @@ using Blog.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            -\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb049341", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3044d34496251dfd64cc8c99b728fe8c605bcb049502", async() => {
                 WriteLiteral("\r\n                Remove\r\n            ");
             }
             );
