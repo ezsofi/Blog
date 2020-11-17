@@ -31,7 +31,7 @@ namespace Blog.Controllers
         public IActionResult GetPost(int id)
         {
             var post = postService.GetPost(id);
-            return View(post);
+            return View("Post", post);
         }
 
         [HttpGet("/Image/{image}")]

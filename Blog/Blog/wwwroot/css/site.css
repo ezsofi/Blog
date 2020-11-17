@@ -1,0 +1,74 @@
+﻿body {
+    /*no space around the content*/
+    margin: 0;
+    background-color: #F19143;
+}
+a{
+    color: white;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+nav {
+    background-color: #F55536;
+    height: 50px;
+    width: 100%;
+    text-align:center;
+}
+
+nav a{
+    display:inline-block;
+    /*fills out the whole space in height*/
+    height:100%;
+    padding:15px;
+}
+.main-image{
+    position:relative; /*title will be positioned by the image place, not the whole site*/
+    height:500px;
+    background-image:url('../content/static/blogbackground.jpg');
+    background-position: center;
+    background-size: cover; 
+}
+.title {
+    position: absolute;
+    color: #FF773D;
+    font-size: 40px;
+    /*position to the center*/
+    left: 50%;
+    transform: translateX(-50%);
+/*position lengthwise, from the very top (beginning of the navbar)*/
+    top:20%;
+
+    text-shadow: 0 0 10px white; /* giving shadow around the text it will stand out*/
+}
+
+.container{
+    max-width:800px;
+    width:100%;
+    margin:auto; /*distribute the margin equally*/
+}
+
+.post{
+    position:relative;
+    display:flex;   /*positions the title to the top*/
+    height:400px;
+    margin:5px;
+    box-shadow: 0 0 5px 0 white;
+}
+
+.post img{
+    width:100%;
+    object-fit:cover;
+}
+
+.no-shadow{
+    box-shadow:none;
+}
+
+.post-body{
+    margin: -5px 5px 0;
+    background-color:white;
+}
