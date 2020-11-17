@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Blog.Database.FileManager;
+
 namespace Blog
 {
     public class Startup
@@ -38,6 +40,7 @@ namespace Blog
             });
 
             services.AddTransient<IPostService, PostService>();
+            services.AddTransient<IFileManager, FileManager>();
 
         }
 
@@ -47,6 +50,7 @@ namespace Blog
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             app.UseAuthentication();
 

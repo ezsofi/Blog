@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\content\blog\" />
+    <Folder Include="wwwroot\content\static\" />
+  </ItemGroup>
+
 </Project>

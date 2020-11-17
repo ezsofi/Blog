@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blog.Database.FileManager;
 using Blog.Database.Repository;
 using Blog.Models;
+using Blog.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +14,12 @@ namespace Blog.Controllers
     [Authorize(Roles ="Admin")]
     public class PanelController : Controller
     {
-        private IPostService postService;
-        public PanelController(IPostService postService)
+        private readonly IPostService postService;
+        private readonly IFileManager fileManager;
+        public PanelController(IPostService postService, IFileManager fileManager)
         {
             this.postService = postService;
+            this.fileManager = fileManager;
         }
 
         [HttpGet("index")]
@@ -30,19 +34,31 @@ namespace Blog.Controllers
         {
             if (id == null)
             {
-                return View(new Post());
+                return View(new PostViewModel());
             }
             else
             {
                 var post = postService.GetPost((int)id);
-                return View(post);
+                return View(new PostViewModel
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Body = post.Body
+                }) ;
             }
 
         }
 
         [HttpPost("edit")]
-        public async Task<IActionResult> Edit(Post post)
+        public async Task<IActionResult> Edit(PostViewModel vm)
         {
+            var post = new Post
+            {
+                Id = vm.Id,
+                Title = vm.Title,
+                Body = vm.Body,
+                Image = await fileManager.SaveImage(vm.Image)  // handle image
+            };
             if (post.Id > 0)
             {
                 postService.UpdatePost(post);
