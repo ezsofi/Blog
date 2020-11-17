@@ -43,10 +43,10 @@ namespace Blog.Controllers
                 {
                     Id = post.Id,
                     Title = post.Title,
-                    Body = post.Body
+                    Body = post.Body,
+                    CurrentImage = post.Image
                 }) ;
             }
-
         }
 
         [HttpPost("edit")]
@@ -56,9 +56,18 @@ namespace Blog.Controllers
             {
                 Id = vm.Id,
                 Title = vm.Title,
-                Body = vm.Body,
-                Image = await fileManager.SaveImage(vm.Image)  // handle image
+                Body = vm.Body
             };
+
+            if (vm.Image == null)
+            {
+                post.Image = vm.CurrentImage;
+            }
+            else
+            {
+                post.Image = await fileManager.SaveImage(vm.Image);
+            }
+
             if (post.Id > 0)
             {
                 postService.UpdatePost(post);
@@ -85,12 +94,6 @@ namespace Blog.Controllers
             await postService.SaveChangesAsync();
 
             return RedirectToAction("Index");
-
         }
-        //[HttpGet("index")]
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
     }
 }
