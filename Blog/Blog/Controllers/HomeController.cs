@@ -22,11 +22,14 @@ namespace Blog.Controllers
         }
         
         [HttpGet("index")]
-        public IActionResult Index()
-        {
-            var posts = postService.GetAllPost();
+        public IActionResult Index(string category)
+        {   
+            var posts = String.IsNullOrEmpty(category)  
+                ? postService.GetAllPost() 
+                : postService.GetAllPost(category);
             return View(posts);
         }
+
         [HttpGet("post/{id}")]
         public IActionResult GetPost(int id)
         {

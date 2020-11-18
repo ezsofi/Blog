@@ -24,6 +24,13 @@ namespace Blog.Database.Repository
             return dbContext.Posts.ToList();
         }
 
+        public List<Post> GetAllPost(string Category)
+        {
+            return dbContext.Posts
+                .Where(p => p.Category.ToLower() == Category.ToLower())
+                .ToList();
+        }
+
         public Post GetPost(int id)
         {
             return dbContext.Posts.FirstOrDefault(p => p.Id ==id);
