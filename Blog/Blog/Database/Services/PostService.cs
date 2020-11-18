@@ -26,8 +26,9 @@ namespace Blog.Database.Repository
 
         public List<Post> GetAllPost(string Category)
         {
+            Func<Post, bool> InCategory = (post) => { return post.Category.ToLower() == Category.ToLower()};
             return dbContext.Posts
-                .Where(p => p.Category.ToLower() == Category.ToLower())
+                .Where(post => InCategory(post))
                 .ToList();
         }
 
